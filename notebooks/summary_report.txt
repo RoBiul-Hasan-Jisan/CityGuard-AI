@@ -1,0 +1,52 @@
+
+ CRIME INTELLIGENCE REPORT
+
+Generated: 2026-04-04 13:20:14
+
+DATASET OVERVIEW
+
+Total Records: 812,414
+Date Range: 2003-01-06 00:01:00 to 2015-05-13 23:53:00
+Time Span: 4510 days
+Police Districts: 10
+Crime Categories: 39
+
+TOP DISTRICTS
+1. SOUTHERN: 147,338 crimes (18.14%)
+2. MISSION: 110,399 crimes (13.59%)
+3. NORTHERN: 98,554 crimes (12.13%)
+
+TOP CRIME CATEGORIES
+
+1. LARCENY/THEFT: 172,546
+2. OTHER OFFENSES: 116,683
+3. NON-CRIMINAL: 90,367
+
+TEMPORAL PATTERNS
+
+Peak Hour: 18:00
+Peak Day: Friday
+Busiest Month: 10
+
+ANOMALY DETECTION
+
+Total Anomaly Weeks: 0
+High Spikes: 0
+Low Spikes: 0
+
+CLUSTERING RESULTS
+
+Optimal Clusters: 4
+Largest Cluster: 2 (60,644.0 points)
+
+OUTPUT FILES GENERATED
+
+- Visualizations: /kaggle/working/visualizations/
+- Interactive Map: /kaggle/working/outputs/sf_crime_map.html
+- Insights Panel: /kaggle/working/outputs/crime_insights_panel.html
+- Feature Files: /kaggle/working/outputs/train_features.csv, test_features.csv
+- Summary Files: weekly_crime_summary.csv, district_statistics.csv, etc.
+
+ANALYSIS COMPLETE
+----------------
+All analyses have been successfully completed and saved.

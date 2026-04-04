@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .insight-panel {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        max-width: 1000px;
+        margin: 20px auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        padding: 20px;
+        color: white;
+    }
+    .header {
+        text-align: center;
+        padding: 20px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+    .header p {
+        margin: 5px 0 0;
+        opacity: 0.9;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .card {
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 15px;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        margin-bottom: 8px;
+    }
+    .card-value {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .card-sub {
+        font-size: 12px;
+        opacity: 0.7;
+    }
+    .insight-section {
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    .insight-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        border-left: 3px solid #ffd700;
+        padding-left: 10px;
+    }
+    .insight-item {
+        margin-bottom: 12px;
+        padding: 10px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+    }
+    .badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+    .badge-critical { background: #ff4757; }
+    .badge-warning { background: #ffa502; }
+    .badge-info { background: #1e90ff; }
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 12px;
+        opacity: 0.7;
+    }
+</style>
+</head>
+<body>
+<div class="insight-panel">
+    <div class="header">
+        <h1> Crime Intelligence Report</h1>
+        <p>San Francisco Police Department | January 06, 2003 - May 13, 2015</p>
+    </div>
+    
+    <div class="grid">
+        <div class="card">
+            <div class="card-title"> Total Incidents</div>
+            <div class="card-value">812,414</div>
+            <div class="card-sub">Across 4510 days</div>
+        </div>
+        <div class="card">
+            <div class="card-title"> Police Districts</div>
+            <div class="card-value">10</div>
+            <div class="card-sub">180 crimes/day avg</div>
+        </div>
+        <div class="card">
+            <div class="card-title"> Crime Categories</div>
+            <div class="card-value">39</div>
+            <div class="card-sub">Unique offense types</div>
+        </div>
+        <div class="card">
+            <div class="card-title"> Anomaly Weeks</div>
+            <div class="card-value">0</div>
+            <div class="card-sub">0 high spikes</div>
+        </div>
+    </div>
+    
+    <div class="insight-section">
+        <div class="insight-title"> Critical Insights</div>
+        
+        <div class="insight-item">
+            <strong> Highest Crime District:</strong> SOUTHERN
+            <span class="badge badge-critical">RANK #1</span>
+            <br>
+            <small>147,338 total incidents (18.14% of all crimes)</small>
+        </div>
+        
+        <div class="insight-item">
+            <strong> Most Common Crime:</strong> LARCENY/THEFT
+            <span class="badge badge-warning">21.2%</span>
+            <br>
+            <small>172,546 reported incidents</small>
+        </div>
+        
+        <div class="insight-item">
+            <strong> Peak Crime Window:</strong> 18:00 on Fridays
+            <br>
+            <small>Highest concentration of criminal activity</small>
+        </div>
+        
+        <div class="insight-item">
+            <strong> Largest Hotspot Cluster:</strong> Cluster 2
+            <span class="badge badge-info">60.6%</span>
+            <br>
+            <small>60,644.0 incidents in this geographical zone</small>
+        </div>
+
+    </div>
+    
+    <div class="insight-section">
+        <div class="insight-title"> Recommended Actions</div>
+        
+        <div class="insight-item">
+            <strong> Resource Allocation:</strong> Increase patrol presence in SOUTHERN district during 18:00-20:00 window
+        </div>
+        
+        <div class="insight-item">
+            <strong> Monitoring Protocol:</strong> Implement real-time alert system when weekly crime count exceeds 2 standard deviations from 4-week moving average
+        </div>
+        
+        <div class="insight-item">
+            <strong> Targeted Operations:</strong> Focus on LARCENY/THEFT prevention in identified hotspot clusters
+        </div>
+        
+        <div class="insight-item">
+            <strong> Review Cycle:</strong> Re-evaluate district rankings and cluster shifts quarterly
+        </div>
+    </div>
+    
+    <div class="footer">
+        Generated by Crime Intelligence System | Data Source: SFPD Crime Incident Reporting
+    </div>
+</div>
+</body>
+</html>

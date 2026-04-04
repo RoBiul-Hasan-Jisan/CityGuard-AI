@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_81daed6b3d89ba818a51d50caa7bac62 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 1000; background: white; padding: 10px 20px; 
+     border-radius: 5px; font-family: Arial; font-size: 16px; 
+     font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+     border: 2px solid #2E86AB;">
+        San Francisco Crime Map
+</div>
+    
+            <div class="folium-map" id="map_81daed6b3d89ba818a51d50caa7bac62" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_81daed6b3d89ba818a51d50caa7bac62 = L.map(
+                "map_81daed6b3d89ba818a51d50caa7bac62",
+                {
+                    center: [37.77, -122.42],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eba989799de8dfd0c455ba28086343f3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eba989799de8dfd0c455ba28086343f3.addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+            var circle_marker_092ead8fc7439bb0489e4a2caa5a9b69 = L.circleMarker(
+                [37.78, -122.41],
+                {"bubblingMouseEvents": true, "color": "#D32F2F", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D32F2F", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.0, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_07922e89fe22a871d1ff8886b4fb08e3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f8fdbf2cb56dbd6352e9a23692839b37 = $(`<div id="html_f8fdbf2cb56dbd6352e9a23692839b37" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District SOUTHERN</b><br>         <b>Rank:</b> #1<br>         <b>Total Crimes:</b> 147,338<br>         <b>Share:</b> 18.14%<br>         <b>Crime Types:</b> 38<br>         <b>Crimes/Day:</b> 32.67     </div>     </div>`)[0];
+                popup_07922e89fe22a871d1ff8886b4fb08e3.setContent(html_f8fdbf2cb56dbd6352e9a23692839b37);
+            
+        
+
+        circle_marker_092ead8fc7439bb0489e4a2caa5a9b69.bindPopup(popup_07922e89fe22a871d1ff8886b4fb08e3)
+        ;
+
+        
+    
+    
+            circle_marker_092ead8fc7439bb0489e4a2caa5a9b69.bindTooltip(
+                `<div>
+                     SOUTHERN: 147,338 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_faaad7bbd92b91f3f2d64d57231cd0fe = L.circleMarker(
+                [37.76, -122.42],
+                {"bubblingMouseEvents": true, "color": "#E64A2E", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E64A2E", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.525132287698433, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_d043538082efc3cb61ffccdb18927bc7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1d5d49c72063da3dd0831001e24bc718 = $(`<div id="html_1d5d49c72063da3dd0831001e24bc718" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District MISSION</b><br>         <b>Rank:</b> #2<br>         <b>Total Crimes:</b> 110,399<br>         <b>Share:</b> 13.59%<br>         <b>Crime Types:</b> 39<br>         <b>Crimes/Day:</b> 24.48     </div>     </div>`)[0];
+                popup_d043538082efc3cb61ffccdb18927bc7.setContent(html_1d5d49c72063da3dd0831001e24bc718);
+            
+        
+
+        circle_marker_faaad7bbd92b91f3f2d64d57231cd0fe.bindPopup(popup_d043538082efc3cb61ffccdb18927bc7)
+        ;
+
+        
+    
+    
+            circle_marker_faaad7bbd92b91f3f2d64d57231cd0fe.bindTooltip(
+                `<div>
+                     MISSION: 110,399 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcd4e4acf239561d89a62ac0899cf662 = L.circleMarker(
+                [37.79, -122.43],
+                {"bubblingMouseEvents": true, "color": "#F57C00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F57C00", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.486885230327843, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_3b50441449cbced7f55eb8b6e1e35faf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dcb04b26cbe335eb634691affe04f057 = $(`<div id="html_dcb04b26cbe335eb634691affe04f057" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District NORTHERN</b><br>         <b>Rank:</b> #3<br>         <b>Total Crimes:</b> 98,554<br>         <b>Share:</b> 12.13%<br>         <b>Crime Types:</b> 39<br>         <b>Crimes/Day:</b> 21.85     </div>     </div>`)[0];
+                popup_3b50441449cbced7f55eb8b6e1e35faf.setContent(html_dcb04b26cbe335eb634691affe04f057);
+            
+        
+
+        circle_marker_fcd4e4acf239561d89a62ac0899cf662.bindPopup(popup_3b50441449cbced7f55eb8b6e1e35faf)
+        ;
+
+        
+    
+    
+            circle_marker_fcd4e4acf239561d89a62ac0899cf662.bindTooltip(
+                `<div>
+                     NORTHERN: 98,554 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6bff2a25fe127baeab2a8b170e62f69 = L.circleMarker(
+                [37.74, -122.39],
+                {"bubblingMouseEvents": true, "color": "#F9A825", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F9A825", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.143820715731074, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_841102431b2973d672627fab2162679a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_91c2a0417ef3c09fa4ab680c3ab28040 = $(`<div id="html_91c2a0417ef3c09fa4ab680c3ab28040" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District BAYVIEW</b><br>         <b>Rank:</b> #4<br>         <b>Total Crimes:</b> 81,622<br>         <b>Share:</b> 10.05%<br>         <b>Crime Types:</b> 39<br>         <b>Crimes/Day:</b> 18.1     </div>     </div>`)[0];
+                popup_841102431b2973d672627fab2162679a.setContent(html_91c2a0417ef3c09fa4ab680c3ab28040);
+            
+        
+
+        circle_marker_e6bff2a25fe127baeab2a8b170e62f69.bindPopup(popup_841102431b2973d672627fab2162679a)
+        ;
+
+        
+    
+    
+            circle_marker_e6bff2a25fe127baeab2a8b170e62f69.bindTooltip(
+                `<div>
+                     BAYVIEW: 81,622 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_846acd233834e9204fe25d26f3f756ef = L.circleMarker(
+                [37.8, -122.41],
+                {"bubblingMouseEvents": true, "color": "#FBC02D", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FBC02D", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0440420660631, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_5d0df3d646906efe1c7f5b54e0cdd1c4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a9747efade4f36eea3135869924ff3cb = $(`<div id="html_a9747efade4f36eea3135869924ff3cb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District CENTRAL</b><br>         <b>Rank:</b> #5<br>         <b>Total Crimes:</b> 81,233<br>         <b>Share:</b> 10.0%<br>         <b>Crime Types:</b> 39<br>         <b>Crimes/Day:</b> 18.01     </div>     </div>`)[0];
+                popup_5d0df3d646906efe1c7f5b54e0cdd1c4.setContent(html_a9747efade4f36eea3135869924ff3cb);
+            
+        
+
+        circle_marker_846acd233834e9204fe25d26f3f756ef.bindPopup(popup_5d0df3d646906efe1c7f5b54e0cdd1c4)
+        ;
+
+        
+    
+    
+            circle_marker_846acd233834e9204fe25d26f3f756ef.bindTooltip(
+                `<div>
+                     CENTRAL: 81,233 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_376e56f124de9b58dd9a48730ff0d6ea = L.circleMarker(
+                [37.73, -122.43],
+                {"bubblingMouseEvents": true, "color": "#AFB42B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#AFB42B", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.800689701034552, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_bac11639333b85d4449d907dd0a8b184 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_94148e0c8285a07eee709064dad69c20 = $(`<div id="html_94148e0c8285a07eee709064dad69c20" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District INGLESIDE</b><br>         <b>Rank:</b> #6<br>         <b>Total Crimes:</b> 72,487<br>         <b>Share:</b> 8.92%<br>         <b>Crime Types:</b> 37<br>         <b>Crimes/Day:</b> 16.07     </div>     </div>`)[0];
+                popup_bac11639333b85d4449d907dd0a8b184.setContent(html_94148e0c8285a07eee709064dad69c20);
+            
+        
+
+        circle_marker_376e56f124de9b58dd9a48730ff0d6ea.bindPopup(popup_bac11639333b85d4449d907dd0a8b184)
+        ;
+
+        
+    
+    
+            circle_marker_376e56f124de9b58dd9a48730ff0d6ea.bindTooltip(
+                `<div>
+                     INGLESIDE: 72,487 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff07165356ada6dce273d289ed1ae3fa = L.circleMarker(
+                [37.78, -122.41],
+                {"bubblingMouseEvents": true, "color": "#7CB342", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7CB342", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.797611696417544, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_9dfaeae180b3e055935fcf1c10149d6b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7c2cf34c130e8232aaf40e106bde720e = $(`<div id="html_7c2cf34c130e8232aaf40e106bde720e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District TENDERLOIN</b><br>         <b>Rank:</b> #7<br>         <b>Total Crimes:</b> 72,475<br>         <b>Share:</b> 8.92%<br>         <b>Crime Types:</b> 38<br>         <b>Crimes/Day:</b> 16.07     </div>     </div>`)[0];
+                popup_9dfaeae180b3e055935fcf1c10149d6b.setContent(html_7c2cf34c130e8232aaf40e106bde720e);
+            
+        
+
+        circle_marker_ff07165356ada6dce273d289ed1ae3fa.bindPopup(popup_9dfaeae180b3e055935fcf1c10149d6b)
+        ;
+
+        
+    
+    
+            circle_marker_ff07165356ada6dce273d289ed1ae3fa.bindTooltip(
+                `<div>
+                     TENDERLOIN: 72,475 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_159aeee8594d5640fb28d2de210b1b33 = L.circleMarker(
+                [37.74, -122.48],
+                {"bubblingMouseEvents": true, "color": "#43A047", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#43A047", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.780910671366007, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_8416c6473428dd9c836f230659d8594a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c8ca384173dcd12bd901f95df8340abd = $(`<div id="html_c8ca384173dcd12bd901f95df8340abd" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District TARAVAL</b><br>         <b>Rank:</b> #8<br>         <b>Total Crimes:</b> 60,714<br>         <b>Share:</b> 7.47%<br>         <b>Crime Types:</b> 38<br>         <b>Crimes/Day:</b> 13.46     </div>     </div>`)[0];
+                popup_8416c6473428dd9c836f230659d8594a.setContent(html_c8ca384173dcd12bd901f95df8340abd);
+            
+        
+
+        circle_marker_159aeee8594d5640fb28d2de210b1b33.bindPopup(popup_8416c6473428dd9c836f230659d8594a)
+        ;
+
+        
+    
+    
+            circle_marker_159aeee8594d5640fb28d2de210b1b33.bindTooltip(
+                `<div>
+                     TARAVAL: 60,714 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c9bceabab99af3fac63cff39ea7bf7d = L.circleMarker(
+                [37.77, -122.45],
+                {"bubblingMouseEvents": true, "color": "#388E3C", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#388E3C", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.882874324311487, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_cc5fa0dea0207d9ff6fe620139fa6f67 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_800f979ba68756bcf1c1844f3f8d7e64 = $(`<div id="html_800f979ba68756bcf1c1844f3f8d7e64" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District PARK</b><br>         <b>Rank:</b> #9<br>         <b>Total Crimes:</b> 45,517<br>         <b>Share:</b> 5.6%<br>         <b>Crime Types:</b> 37<br>         <b>Crimes/Day:</b> 10.09     </div>     </div>`)[0];
+                popup_cc5fa0dea0207d9ff6fe620139fa6f67.setContent(html_800f979ba68756bcf1c1844f3f8d7e64);
+            
+        
+
+        circle_marker_3c9bceabab99af3fac63cff39ea7bf7d.bindPopup(popup_cc5fa0dea0207d9ff6fe620139fa6f67)
+        ;
+
+        
+    
+    
+            circle_marker_3c9bceabab99af3fac63cff39ea7bf7d.bindTooltip(
+                `<div>
+                     PARK: 45,517 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29e0dec30f7ac7387dd26e0c49540218 = L.circleMarker(
+                [37.78, -122.47],
+                {"bubblingMouseEvents": true, "color": "#2E7D32", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2E7D32", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 2}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+        var popup_b4e67630d3f03ec090ff4f61874612a0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9ce5fb1fa46ebc3fdc6e929033fa17b = $(`<div id="html_d9ce5fb1fa46ebc3fdc6e929033fa17b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: monospace; min-width: 180px;">         <b style="color: #2E86AB;">District RICHMOND</b><br>         <b>Rank:</b> #10<br>         <b>Total Crimes:</b> 42,075<br>         <b>Share:</b> 5.18%<br>         <b>Crime Types:</b> 38<br>         <b>Crimes/Day:</b> 9.33     </div>     </div>`)[0];
+                popup_b4e67630d3f03ec090ff4f61874612a0.setContent(html_d9ce5fb1fa46ebc3fdc6e929033fa17b);
+            
+        
+
+        circle_marker_29e0dec30f7ac7387dd26e0c49540218.bindPopup(popup_b4e67630d3f03ec090ff4f61874612a0)
+        ;
+
+        
+    
+    
+            circle_marker_29e0dec30f7ac7387dd26e0c49540218.bindTooltip(
+                `<div>
+                     RICHMOND: 42,075 crimes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5920f0ae1494e1b3325d27eb4bb139ca = L.marker(
+                [37.73975135917257, -122.40412534933247],
+                {
+}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+            var icon_b5be6c7107e28caf3d44db6f3e0783eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08a605944fd116696d751d97f598473c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b468da436b3309b03d7b90768ec74bf = $(`<div id="html_5b468da436b3309b03d7b90768ec74bf" style="width: 100.0%; height: 100.0%;">Hotspot Cluster 0</div>`)[0];
+                popup_08a605944fd116696d751d97f598473c.setContent(html_5b468da436b3309b03d7b90768ec74bf);
+            
+        
+
+        marker_5920f0ae1494e1b3325d27eb4bb139ca.bindPopup(popup_08a605944fd116696d751d97f598473c)
+        ;
+
+        
+    
+    
+            marker_5920f0ae1494e1b3325d27eb4bb139ca.bindTooltip(
+                `<div>
+                     Cluster 0 Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5920f0ae1494e1b3325d27eb4bb139ca.setIcon(icon_b5be6c7107e28caf3d44db6f3e0783eb);
+            
+    
+            var marker_ef5859ee8a971237a7c421c92278878d = L.marker(
+                [37.724137299429586, -122.4506442423245],
+                {
+}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+            var icon_435d03d56ec079a36287b42b369d2196 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ad182f797c0065fc14af7882cd215c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60f4f5f25c14f8488c938ce7e59187b2 = $(`<div id="html_60f4f5f25c14f8488c938ce7e59187b2" style="width: 100.0%; height: 100.0%;">Hotspot Cluster 1</div>`)[0];
+                popup_3ad182f797c0065fc14af7882cd215c5.setContent(html_60f4f5f25c14f8488c938ce7e59187b2);
+            
+        
+
+        marker_ef5859ee8a971237a7c421c92278878d.bindPopup(popup_3ad182f797c0065fc14af7882cd215c5)
+        ;
+
+        
+    
+    
+            marker_ef5859ee8a971237a7c421c92278878d.bindTooltip(
+                `<div>
+                     Cluster 1 Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef5859ee8a971237a7c421c92278878d.setIcon(icon_435d03d56ec079a36287b42b369d2196);
+            
+    
+            var marker_64fbc443549a239b4eaeeaad3fa681be = L.marker(
+                [37.78212028042554, -122.41495560172443],
+                {
+}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+            var icon_e47682564e9d7b8c00b6db11f80e4968 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1dd50ef9e4d7ef08e9f14cdc62ddbbc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16cd8dc096604d950a7e9f231c5883a0 = $(`<div id="html_16cd8dc096604d950a7e9f231c5883a0" style="width: 100.0%; height: 100.0%;">Hotspot Cluster 2</div>`)[0];
+                popup_1dd50ef9e4d7ef08e9f14cdc62ddbbc9.setContent(html_16cd8dc096604d950a7e9f231c5883a0);
+            
+        
+
+        marker_64fbc443549a239b4eaeeaad3fa681be.bindPopup(popup_1dd50ef9e4d7ef08e9f14cdc62ddbbc9)
+        ;
+
+        
+    
+    
+            marker_64fbc443549a239b4eaeeaad3fa681be.bindTooltip(
+                `<div>
+                     Cluster 2 Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64fbc443549a239b4eaeeaad3fa681be.setIcon(icon_e47682564e9d7b8c00b6db11f80e4968);
+            
+    
+            var marker_da17499dbe1e75a170b66dd4f3742044 = L.marker(
+                [37.76723166262421, -122.4715747793059],
+                {
+}
+            ).addTo(map_81daed6b3d89ba818a51d50caa7bac62);
+        
+    
+            var icon_f6778a80b464ed686778743aca6c6faf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fe76ec161a16098bb3803a2feecddc78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd87501f4bf56b0997a964c39f5cd4f0 = $(`<div id="html_cd87501f4bf56b0997a964c39f5cd4f0" style="width: 100.0%; height: 100.0%;">Hotspot Cluster 3</div>`)[0];
+                popup_fe76ec161a16098bb3803a2feecddc78.setContent(html_cd87501f4bf56b0997a964c39f5cd4f0);
+            
+        
+
+        marker_da17499dbe1e75a170b66dd4f3742044.bindPopup(popup_fe76ec161a16098bb3803a2feecddc78)
+        ;
+
+        
+    
+    
+            marker_da17499dbe1e75a170b66dd4f3742044.bindTooltip(
+                `<div>
+                     Cluster 3 Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da17499dbe1e75a170b66dd4f3742044.setIcon(icon_f6778a80b464ed686778743aca6c6faf);
+            
+</script>
+</html>

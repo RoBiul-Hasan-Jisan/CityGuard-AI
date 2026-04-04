@@ -1,0 +1,38 @@
+notebooks/ArachneX_analysis.ipynb
+
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Anaconda project files
+
+
+# Unnecessary personal/media files
+*.jpeg
+*.jpg
+*.pdf
+Untitled.ipynb
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor files
+.vscode/
+.idea/
+*.suo
+*.user
