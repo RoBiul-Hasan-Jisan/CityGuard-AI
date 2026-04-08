@@ -6,12 +6,16 @@
 [![Status](https://img.shields.io/badge/status-production%20ready-brightgreen.svg)]()
 
 > **Advanced Crime Analytics Platform for San Francisco Police Department**
-> 
+>
 > Real-time crime intelligence, anomaly detection, and predictive analytics for data-driven policing
 
-##  Live Demo Preview
+## Live Demo Preview
 
-![CityGuard Dashboard Preview](https://via.placeholder.com/1200x600?text=CityGuard+Dashboard+Preview)
+![CityGuard Dashboard Preview](https://github.com/RoBiul-Hasan-Jisan/CityGuard-AI/blob/main/image.png)
+
+- [▶️ Watch Demo](https://github.com/RoBiul-Hasan-Jisan/CityGuard-AI/blob/main/demo.mp4)
+  
+- **Kaggle:** [robiulhasanjisan](https://www.kaggle.com/code/robiulhasanjisan/crime-analysis)
 
 ##  Key Features
 
@@ -149,33 +153,33 @@ streamlit-folium>=0.6.0
 
 - **For Law Enforcement**
   
-Resource Allocation: Identify high-crime areas for patrol deployment
+  - Resource Allocation: Identify high-crime areas for patrol deployment
 
-Predictive Policing: Forecast crime patterns based on historical data
+  - Predictive Policing: Forecast crime patterns based on historical data
 
-Performance Metrics: Track district-level crime reduction
+  - Performance Metrics: Track district-level crime reduction
 
-Emergency Response: Optimize response times using hotspot analysis
+  - Emergency Response: Optimize response times using hotspot analysis
 
 - **For Policy Makers**
   
-Strategic Planning: Data-driven policy decisions
+  - Strategic Planning: Data-driven policy decisions
 
-Budget Allocation: Evidence-based resource distribution
+  - Budget Allocation: Evidence-based resource distribution
 
-Public Safety Reports: Generate comprehensive crime reports
+  - Public Safety Reports: Generate comprehensive crime reports
 
-Community Outreach: Identify areas needing community programs
+  - Community Outreach: Identify areas needing community programs
 
 - **For Researchers**
   
-Crime Pattern Analysis: Study temporal and spatial patterns
+  - Crime Pattern Analysis: Study temporal and spatial patterns
 
-Anomaly Detection: Identify unusual crime events
+  - Anomaly Detection: Identify unusual crime events
 
-Cluster Analysis: Understand crime concentration areas
+  - Cluster Analysis: Understand crime concentration areas
 
-Predictive Modeling: Develop new prediction algorithms
+  - Predictive Modeling: Develop new prediction algorithms
 
 ## Analytics Dashboard Components
 ```bash
@@ -267,3 +271,11 @@ Data export options
   -  Cross-city comparison
 
   -  Social media sentiment analysis
+
+## 👨‍💻 Author
+**Robiul Hasan Jisan**
+
+- **Portfolio:** [robiulhasanjisan.vercel.app](https://robiulhasanjisan.vercel.app/)
+- **GitHub:** [@RoBiul-Hasan-Jisan](https://github.com/RoBiul-Hasan-Jisan)
+- **Kaggle:** [robiulhasanjisan](https://www.kaggle.com/robiulhasanjisan)
+
